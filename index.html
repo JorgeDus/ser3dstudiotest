@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ser3d Studio | 3D Visualization Studio</title>
+    
+     <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔌 GLightbox CSS (add this line) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">SER 3D .STUDIO</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+<!-- Home section -->
+<section id="home">
+    <div class="home-background">
+        <!-- Replace the iframe with this video tag -->
+        <video playsinline autoplay muted loop poster="images/fallback-image.jpg"> {/* Optional: Poster image */}
+            <!-- Provide video sources - Browser picks the first it supports -->
+            <source src="Pucon Life Final 480.webm" type="video/webm"> {/* Preferred format first */}
+            Your browser does not support the video tag. {/* Fallback text */}
+        </video>
+        <!-- End of video tag replacement -->
+    </div>
+    <div class="container">
+        <div class="home-content">
+            <h1>Archviz Studio</h1>
+            <p>We create photorealistic 3D visualizations that bring architectural designs to life with precision, artistry, and attention to detail.</p>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-arrow"></div>
+    </div>
+    
+</section>
+    <!-- Gallery section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Galería</h2>
+                <p>A selection of our finest architectural visualization work, showcasing our commitment to photorealism and design.</p>
+            </div>
+            
+            <div class="gallery-item">
+                <!-- Visible Thumbnail Link - Opens the lightbox for Project 1 -->
+                <a href="imagenes/Edificio Victoria - Depto Loft - Camara 01 - Alta.jpg"
+                   class="glightbox"
+                   data-gallery="project1-gallery"
+                   data-description=".project-description-1">
+                    <img src="imagenes/Edificio Victoria - Depto Loft - Camara 01 - Alta.jpg" alt="Riverside Residence - View 1">
+                </a>
+            
+                <!-- Hidden links for additional images in the SAME project gallery -->
+                <a href="imagenes/Edificio Victoria - Depto Loft - Camara 02 - Alta.jpg" /* CHANGE THIS PATH */
+                   class="glightbox"
+                   data-gallery="project1-gallery"
+                   style="display: none;"></a>
+                <a href="imagenes/Edificio Victoria - Depto Loft - Camara 03 - Alta.jpg" /* CHANGE THIS PATH */
+                   class="glightbox"
+                   data-gallery="project1-gallery"
+                   style="display: none;"></a>
+            
+                <!-- Overlay (stays the same) -->
+                <div class="gallery-item-overlay">
+                    <h3>Riverside Residence</h3>
+                    <p>Exterior visualization | Residential project</p>
+                </div>
+            
+                <!-- Optional: Hidden description element for the lightbox -->
+                <div class="glightbox-desc project-description-1" style="display: none;">
+                    <h4>Riverside Residence</h4>
+                    <p>This is a detailed description for the Riverside Residence project shown in the lightbox carousel. You can add more text here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+<!-- About Section (Formerly Bio) - UPDATED -->
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2> {/* Changed from Bio */}
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            We are passionate about [mention your core passion, e.g., architectural visualization, bringing designs to life]. Our studio focuses on creating high-quality, photorealistic renderings that help our clients effectively communicate their vision. We combine technical expertise with artistic sensibility to deliver compelling visuals. [Add another sentence or two about your approach or values].
+        </p>
+        {/* You can add more paragraphs or content here as needed */}
+    </div>
+</section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>We're always looking for new projects and collaborations. Share your vision with us, and we'll bring it to life through stunning 3D visualizations.</p>
+                </div>
+
+                <div class="contact-form-container">
+                    <form action="https://formsubmit.co/jorge.dussert@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project">Project Details</label>
+                            <textarea id="project" name="project" required></textarea>
+                        </div>
+
+
+                        {/* OPTIONAL: Redirect to your custom Thank You page after submission */}
+                        {/* Replace VALUE with the FULL URL of your thank-you page on GitHub Pages */}
+                        <input type="hidden" name="_next" value="https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/thank-you.html">
+
+                        {/* OPTIONAL: Customize the subject line of the emails you receive */}
+                        <input type="hidden" name="_subject" value="New Submission from Portfolio Website!">
+
+                        {/* OPTIONAL: Disable the simple CAPTCHA page shown by FormSubmit */}
+                        {/* Remove this line if you WANT the captcha challenge */}
+                        <input type="hidden" name="_captcha" value="false">
+
+                        {/* ----- Your existing submit button (unchanged) ----- */}
+                        <button type="submit" class="submit-button">SEND MESSAGE</button>
+                    </form>
+                    {/* ----- END OF MODIFIED FORM ----- */}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">ARCHVIZ STUDIO</div>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 📚 GLightbox JS (Add this line) -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Your existing JavaScript for header/scroll -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize GLightbox (Add this block)
+        const lightbox = GLightbox({
+            selector: '.glightbox', // Targets elements with the 'glightbox' class
+            touchNavigation: true,  // Enable swipe navigation on touch devices
+            loop: false,            // Stop at first/last slide
+            autoplayVideos: true,
+            // You can add more configuration options here if needed
+            // See GLightbox documentation: https://github.com/biati-digital/glightbox
+             descPosition: 'bottom', // Default is bottom, other options: 'top', 'left', 'right'
+             closeButton: true, // Show close button
+        });
+
+    </script>
+</body>
+</html>
